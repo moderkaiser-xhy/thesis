@@ -5,7 +5,7 @@
 #include <cstdlib>
 
 using namespace std;
-void cpp_split(const std::string& s, std::vector<std::string>& v, const std::string& c)
+void cpp_split(const std::string& s, std::vector<std::string>& v, const std::string& c)     ///c++实现split函数
 {
     std::string::size_type pos1, pos2;
     pos2 = s.find(c);
