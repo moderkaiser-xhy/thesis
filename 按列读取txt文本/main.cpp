@@ -5,20 +5,20 @@
 #include <cstdlib>
 
 using namespace std;
-void cpp_split(const std::string& s, std::vector<std::string>& v, const std::string& c)     ///c++实现split函数
+void cpp_split(const std::string& str, std::vector<std::string>& ans, const std::string& c)     ///c++实现split函数
 {
     std::string::size_type pos1, pos2;
-    pos2 = s.find(c);
+    pos2 = str.find(c);
     pos1 = 0;
     while(std::string::npos != pos2)
     {
-        v.push_back(s.substr(pos1, pos2-pos1));
+        ans.push_back(s.substr(pos1, pos2-pos1));
 
         pos1 = pos2 + c.size();
-        pos2 = s.find(c, pos1);
+        pos2 = str.find(c, pos1);
     }
-    if(pos1 != s.length())
-        v.push_back(s.substr(pos1));
+    if(pos1 != str.length())
+        ans.push_back(str.substr(pos1));
 }
 
 int txt_col(const std::string& file_name, const std::string& col_name, vector<float>& res){
